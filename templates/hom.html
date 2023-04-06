@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoTube</title>
+
+    <link rel="stylesheet" href="../static/index.css">
+
+    <style>
+        form {
+            background-color: #ff0000;
+            padding: 40px 40px;
+            border-radius: 20px;
+        }
+
+        input {
+            height: 8px;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .base {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            background-color: white;
+            outline: none;
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+        }
+
+        textarea{
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .input-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="LOGO"><span>BoTube</span></div>
+        <div class="push-left">
+            <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                <span class="hamburger-line hamburger-line-top"></span>
+                <span class="hamburger-line hamburger-line-middle"></span>
+                <span class="hamburger-line hamburger-line-bottom"></span>
+            </button>
+
+            <!--  Menu compatible with wp_nav_menu  -->
+            <ul id="primary-menu" class="menu nav-menu">
+                <li class="menu-item current-menu-item"><a class="nav__link" href="index.html">Home</a></li>
+                <li class="menu-item "><a class="nav__link" href="#">About BoTube</a></li>
+                <li class="menu-item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="github-button">
+            <img src="github-logo.png" alt="" width="10px">
+            <a class="">GitHub</a>
+        </div>
+
+    </nav>
+
+    <div class="base">
+
+
+        <div class="form">
+
+
+            <form action="/videoupload" method="post">
+                <div class="input-container">
+                    <label for="VideoTitle">Enter a VideoTitle:</label>
+                    <input type="text" id="VideoTitle" name="VideoTitle">
+                </div>
+
+                <div class="input-container">
+                    <label for="VideoDescription">Enter a VideoDescription:</label>
+                    <textarea cols="30" rows="10"  id="VideoDescription" name="VideoDescription"></textarea>
+
+                </div>
+
+                <div class="input-container">
+                    <label for="VideoKeywords">Enter a VideoKeywords:</label>
+                    <input type="text" id="VideoKeywords" name="VideoKeywords">
+                </div>
+
+                <div class="input-container">
+                    <label for="VideoPrivacyStatus">Select a VideoPrivacyStatus:</label>
+                    <select id="VideoPrivacyStatus" name="VideoPrivacyStatus">
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                        <option value="unlisted">unlisted</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <button type="submit" name="operation" value="download_video">Translate your video</button>
+                    <button type="cancel" name="operation2" value="cancel">Cancel</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>

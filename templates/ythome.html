@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../static/index.css">
+
+    <style>
+        form {
+            background-color: #ffffff38;
+            padding: 40px 40px;
+            border-radius: 20px;
+        }
+
+        input {
+            height: 8px;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .base {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            background-color: white;
+            outline: none;
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+        }
+
+        textarea {
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="LOGO"><span>BoTube</span></div>
+        <div class="push-left">
+            <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                <span class="hamburger-line hamburger-line-top"></span>
+                <span class="hamburger-line hamburger-line-middle"></span>
+                <span class="hamburger-line hamburger-line-bottom"></span>
+            </button>
+
+            <!--  Menu compatible with wp_nav_menu  -->
+            <ul id="primary-menu" class="menu nav-menu">
+                <li class="menu-item current-menu-item"><a class="nav__link" href="index.html">Home</a></li>
+                <li class="menu-item "><a class="nav__link" href="#">About BoTube</a></li>
+                <li class="menu-item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="github-button">
+            <img src="github-logo.png" alt="" width="10px">
+            <a class="">GitHub</a>
+        </div>
+
+    </nav>
+
+    <div class="base">
+
+        <div class="form">
+
+            <form action="/videoupload" method="post">
+                <h1>Enter the video details to upload</h1>
+                <div class="input-container">
+                    <label for="video_title">Title:</label>
+                    <input type="text" id="video_title" name="video_title">
+                </div>
+
+                <div class="input-container">
+                    <label>Description:</label>
+                    <textarea cols="30" rows="3" id="Description" name="Description"></textarea>
+                </div>
+                <div class="input-container">
+                    <label>Keywords:</label>
+                    <textarea cols="30" rows="3" id="Keywords" name="Keywords"></textarea>
+                </div>
+                <div class="input-container">
+                    <label>PrivacyStatus:</label>
+                    <select>
+                        <option>Public</option>
+                        <option>Private</option>
+                        <option>Unlisted</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <button type="submit" name="operation" value="download_video">Translate your video</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>

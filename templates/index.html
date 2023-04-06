@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/index.css">
+
+    <title>BoTube</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="LOGO"><span>BoTube</span></div>
+        <div class="push-left">
+            <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                <span class="hamburger-line hamburger-line-top"></span>
+                <span class="hamburger-line hamburger-line-middle"></span>
+                <span class="hamburger-line hamburger-line-bottom"></span>
+            </button>
+
+            <!--  Menu compatible with wp_nav_menu  -->
+            <ul id="primary-menu" class="menu nav-menu">
+                <li class="menu-item current-menu-item"><a class="nav__link" href="index.html">Home</a></li>
+                <li class="menu-item "><a class="nav__link" href="#">About BoTube</a></li>
+                <li class="menu-item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="github-button">
+            <img src="github-logo.png" alt="" width="10px">
+            <a class="">GitHub</a>
+        </div>
+
+    </nav>
+
+    <!-- Landing Page -->
+
+    <div class="landing_page">
+
+        <h1>Transform your ideas into stunning videos with our powerful automated video creator.</h1>
+
+        <div class="form_fields">
+            <form action="/download" method="post">
+
+                <div class="input-container">
+                    <input type="text" id="link" name="link" placeholder="Enter a Link" />
+                    <select id="language" name="language">
+                        <option value="ta">Tamil</option>
+                        <option value="te">Telugu</option>
+                        <option value="chinese">Chinese</option>
+                    </select>
+                    <a href="#">
+                        <button class="button" type="submit" name="operation" value="download_video">Translate</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="../static/script.js"></script>
+
+</body>
+
+</html>
