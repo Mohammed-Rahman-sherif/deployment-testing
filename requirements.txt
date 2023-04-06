@@ -1,0 +1,17 @@
+google-api-python-client==2.19.1
+google-auth-oauthlib==0.4.6
+google-auth-httplib2==0.1.1
+oauth2client==4.1.3
+google-auth==2.3.1
+requests==2.26.0
+fastapi==0.70.0
+uvicorn==0.15.0
+pycairo==1.20.1
+numpy==1.21.5
+gtts==2.3.2
+pytube==10.9.2
+SpeechRecognition==3.8.1
+playsound==1.3.0
+translate==3.6.1
+moviepy==1.1.3
+jinja2==3.1.0
