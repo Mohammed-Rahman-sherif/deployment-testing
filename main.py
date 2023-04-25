@@ -6,6 +6,7 @@ import sys
 import tempfile
 from pathlib import Path
 import wave_1 as WV
+import mainvideo as genim
 
 import cairo
 import numpy as np
@@ -163,6 +164,10 @@ class YouTubeTranscribe:
 
     def connect_wave():
         WV.generate_wave(audio_path = Path(f'Audio/Translated/{name}.mp3'), output_path= Path(f'Media/Waves/{name}.mp4'))
+        print('Waveform generation complete.')
+
+    def Genim():
+        genim.generate_wave(audio_path = Path(f'Audio/Translated/{name}.mp3'), output_path= Path(f'Media/Waves/{name}.mp4'))
         print('Waveform generation complete.')
 
     def merge_audio_video(audio_path = f'Audio/Translated/{name}.mp3', video_path=f'Media/Waves/{name}.mp4', output_path = f'Media/Result/{name}.mp4'):

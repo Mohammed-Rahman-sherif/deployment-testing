@@ -13,10 +13,10 @@ templates = Jinja2Templates(directory="templates/")
 
 @app.get("/")
 def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/download")
-def calculate(request: Request, operation: str = Form(...), link: str = Form(...), language: str = Form(...)):
+def calculate(request: Request, operation: str = Form(...), link: str = Form(...), language: str = Form(...), video: str = Form(...)):
     if operation == "download_video":
         print(link)
         print(language)
@@ -25,7 +25,10 @@ def calculate(request: Request, operation: str = Form(...), link: str = Form(...
         result = YT.transcribe_audio()
         result = YT.translate_file(language)
         result = YT.speak_text(language)
-        result = YT.connect_wave()
+        if video == "Wave":
+            result = YT.connect_wave()
+        elif video == "Genim":
+            result = YT.Genim()
         result = YT.merge_audio_video()
     else:
         result = "Invalid operation"
